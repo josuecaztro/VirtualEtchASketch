@@ -22,22 +22,26 @@ startButton.addEventListener("click", ()=> {
 
 //REVEALS CONTAINER TWO AFTER CLICKING ENTER
 enterButton.addEventListener("click", ()=> {
+
+    if (userInput.value >= 100 && userInput.value <= 5000){
         if (containerTwo.style.display = "none"){
             containerTwo.style.display = "block";
             containerOne.style.display = "none";
         } else {
             containerTwo.style.display = "none";
-        }});
+        }}});
 
 //ALSO REVEALS CONTAINER TWO BUT AFTER PRESSING ENTER KEY
 userInput.addEventListener("keyup", function (event){
+    if (userInput.value >= 100 && userInput.value <= 5000){
+
     if (event.key === "Enter"){
         if (containerTwo.style.display = "none"){
                 containerTwo.style.display = "block";
                 containerOne.style.display = "none";
         } else {
                 containerTwo.style.display = "none";
-        }}});
+        }}}});
 
 //TO MAKE RESTART BUTTON WORK
 restartButton.addEventListener("click", ()=> {
