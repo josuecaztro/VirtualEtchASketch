@@ -1,3 +1,5 @@
+
+//THESE ARE ALL YOUR DOM SELECTORS
 const gridContainer = document.querySelector("#grid-container");
 const square = document.querySelector(".a-square");
 let userInput = document.querySelector("#user-number");
@@ -9,6 +11,7 @@ let restartButton = document.querySelector("#restart-here");
 let clearButton = document.querySelector("#clear-here");
 let funButton = document.querySelector("#fun-mode");
 
+//REVEALS CONTAINER ONE AFTER PRESSING START
 startButton.addEventListener("click", ()=> {
     if (containerOne.style.display = "none"){
         containerOne.style.display = "flex";
@@ -17,6 +20,7 @@ startButton.addEventListener("click", ()=> {
         containerOne.style.display = "none";
     }});
 
+//REVEALS CONTAINER TWO AFTER CLICKING ENTER
 enterButton.addEventListener("click", ()=> {
         if (containerTwo.style.display = "none"){
             containerTwo.style.display = "block";
@@ -25,6 +29,7 @@ enterButton.addEventListener("click", ()=> {
             containerTwo.style.display = "none";
         }});
 
+//ALSO REVEALS CONTAINER TWO BUT AFTER PRESSING ENTER KEY
 userInput.addEventListener("keyup", function (event){
     if (event.key === "Enter"){
         if (containerTwo.style.display = "none"){
@@ -34,12 +39,14 @@ userInput.addEventListener("keyup", function (event){
                 containerTwo.style.display = "none";
         }}});
 
+//TO MAKE RESTART BUTTON WORK
 restartButton.addEventListener("click", ()=> {
     location.reload();
 });
 
 
-
+//THE DEFAULT MAKE GRID FUNCTION 
+//THIS IS A PARENT OF MAKEGRID()
 function defaultGrid(){
     let fakeNum = userInput.value;
     let almostNum = parseInt(fakeNum);
@@ -55,14 +62,17 @@ function defaultGrid(){
     makeGrid(num - 1);
 }};
 
+//MAKES GRID BASED OFF NUMBER APPEAR AFTER CLICKING ENTER
 enterButton.addEventListener("click", defaultGrid);
+
+//MAKES GRID BASED OFF NUMBER APPEAR AFTER PRESSING ENTER KEY
 userInput.addEventListener("keyup", function (event) {
     if (event.key === "Enter"){
         defaultGrid();
     }
 });
 
-
+//MAKE GRID FUNCTION - THIS IS A CHILD OF DEFAULT GRID()
 function makeGrid(num){
 
     for (i = 0; i < num; i++){
@@ -76,12 +86,15 @@ function makeGrid(num){
     
 
 }
+
+//THE FUNCTION TO MAKE A RANDOM COLOR GENERATE
 function getRandomColor(){
     let randomColor = Math.floor(Math.random()*16777215).toString(16);
     let answer = "#" + randomColor;
     return answer;
 }
 
+//THIS ACTIVATES FUN MODE 
 function randomColorMode(){
         let trulyAllSquares = document.querySelectorAll(".a-square");
         trulyAllSquares.forEach(element => {
@@ -94,8 +107,11 @@ function randomColorMode(){
     
 }
 
+//MAKES FUN MODE ACTIVE ONCE FUN BUTTON IS CLICKED
 funButton.addEventListener("click", randomColorMode);
 
+
+//SETS ALL DIVS BACK TO NORMAL AKA CLEARS ALL DIVS 
 clearButton.addEventListener("click", ()=> {
     let allSquares = document.querySelectorAll(".a-square");
     allSquares.forEach(element => {
@@ -106,7 +122,6 @@ clearButton.addEventListener("click", ()=> {
     })});
    
 });
-
 
 
 
