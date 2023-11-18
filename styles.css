@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(135, 172, 200);
+    margin: 50px 25px;
+    gap: 5px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+#grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 1px;
+    max-width: 703px;
+    height: auto;
+    border: 15px ridge rgb(207, 45, 45);
+    border-radius: 15px;
+    box-shadow: 5px 5px 2.5px black;
+}
+
+.a-square {
+    height: 15px;
+    width: 15px;
+    background-color: lightgrey;
+    flex-grow: 1;
+}
+
+.hovered {
+    height: 15px;
+    width: 15px;
+    background-color: black;
+}
+
+.container-one {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+}
+
+.container-two {
+   display: none;
+}
+
+
+#restart-here {
+    margin-top: 50px;
+}
+
+.hoveredRGB {
+    height: 15px;
+    width: 15px;
+}
+
+button {
+    background-color: lightblue;
+    padding: 10px 50px;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-shadow: 2px 3px 2.5px lightblue;
+}
+
+button:hover {
+    background-color: rgb(90, 187, 219);
+}
+
+h1 {
+    background-color: rgba(51, 150, 189, 0.496);
+    padding: 15px 50px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 2px 3px 2.5px lightblue;
+    text-shadow: 2px 2px 2px black;
+}
+
+h4 {
+    text-shadow: 2px 2px 2px black;
+
+}
+
+#special-note {
+    font-size: 20px;
+
+}
+
+.container-one p {
+    color: rgb(224, 236, 255);
+    margin: 0px;
+    padding: 10px;
+}
+
+.container-one #special-note {
+    padding-bottom: 50px;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
